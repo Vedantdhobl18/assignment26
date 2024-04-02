@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        body{
+        background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+min-height: 100vh;
+        }
+        .aap-title{
+            text-align: center;
+
+        }
+        .emoji-container{
+            background-color: white;
+            width: 400px;
+            display: block;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgda(0 , 0 , 0 ,0.1);
+
+
+        }
+        .emoji-img{
+            height: 250px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-toggle{
+            font-size: 20px;
+            padding: 5px 20px ;
+            border-radius: 40px;
+            border: none;
+            margin: 0 20px;
+            cursor: pointer;
+            color: white;
+        }
+        .btn-on{
+            background-color: green;
+        }
+
+         .btn-off{
+            background-color: red;
+         }
+
+        .btn-toggle:hover{
+            box-shadow: 0 0 10px  rgda(0 , 0, 0, 0.1);
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .emoji-container {
+                width: 80px;
+            }
+            .emoji-img{
+                height: 150px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="aap-title">Bulb Toggler</h1>
+
+    <div class="emoji-container">
+    <img src="happyboy.png" class="emoji-img" id="emoji"/>
+   
+</div>
+
+<div class="btn-container">
+
+<button class="btn-toggle btn-on " onclick="toggleemoji('Happy')">Happy </button>
+<button class="btn-toggle btn-off " onclick="toggleemoji('Sad')"> Sad </button>
+</div>
+<script>
+    function toggleemoji(state){
+        const bulbelement= document.getElementById('emoji')
+        bulbelement.src = 'happyboy.png';
+        if (state=='Happy'){
+            bulbelement.src = 'happyboy.png'
+
+        }
+        else {
+            bulbelement.src = 'sadboy.png'
+
+        }
+    }
+
+    
+</script>
+
+
+</body>
+</html>
